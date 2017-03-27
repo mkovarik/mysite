@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Michael Kovarik</title>
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="content-wrapper">
+    <div class="header">
+    <div class="content">
+      <h1>Michael <span class="red">Kovarik</span></h1>
+      <div class="logo-container">
+        <a href="mailto: michaelkovarik@outlook.com"><img src="static/img/email-icon.svg"></a>
+        <a href="https://github.com/mkovarik"><img src="static/img/github-icon.svg"></a>
+        <a href="https://www.linkedin.com/in/michael-kovarik-1380a3112"><img src="static/img/linkedin-icon.svg"></a>
+      </div>
+    </div>
+    </div>
+    <div class="archive content">
+      <h2>About me</h2>
+      <p>Rutgers grad student. My expertise is on applied mathematics, with a focus on quantitative finance.</p>
+      <ul>
+        <li><a href="static/resume.pdf">Resume</a></li>
+	<li><a href="static/businesscard.pdf">Business card</a></li>
+      </ul>
+      <h2>Blog</h2>
+      <dl>
+      {{#categories}}
+          <dt><strong>{{name}}</strong></dt>
+	  {{#posts}}
+          <dd><a href="posts/{{url}}.html">{{title}}</a></dd>
+	  {{/posts}}
+      {{/categories}}
+      </dl>
+    </div>
+  </div>
+  </body>
+</html>

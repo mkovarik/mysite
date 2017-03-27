@@ -1,0 +1,15 @@
+categories:
+  - name: Finance
+    posts:
+      - title: Diffusion Processes
+        url: diffusion_processes
+      - title: Parameter Calibration
+        url: parameter_calibration
+      - title: Monte Carlo
+        url: monte_carlo
+      - title: "Black-Scholes Formula"
+        url: black_scholes_formula
+      - title: Four Essential Quant Books
+        url: four_essential_quant_books
+      - title: "Black-Scholes Demo"
+        url: black_scholes_demo

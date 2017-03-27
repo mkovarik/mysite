@@ -1,0 +1,81 @@
+html {
+  color: #222;
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0px;
+  background: #dedede;
+}
+
+.header {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 2em;
+}
+
+.content {
+  margin: auto;
+  max-width: 32em;
+}
+.content-wrapper {
+    max-width: 64em;
+    background: #f9f9f9;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px #888888;
+    padding-bottom: 4em;
+}
+.content figure {
+  max-width: inherit;
+}
+.content figure img {
+  max-width: inherit;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  font-size: 1em;
+}
+
+a {
+  color: #d64937;
+  text-decoration: none;
+}
+
+.post {
+  padding-top: 2em;
+}
+.backnav {
+  display: block;
+  text-align: center;
+}
+
+.red {
+    color: #d64937;
+}
+
+
+/* Tables */
+table, th, td {
+  margin: auto;
+  border: 1px solid #2d2d2d;
+}
+
+/* Definition lists */
+dt {
+  font-weight: bold;
+}
+
+/* Code blocks */
+pre, dl {
+  background: #dedede;
+  padding: 2em;
+  border-radius: 1em;
+  border-style: solid;
+}
+pre code {
+  white-space: pre;
+}

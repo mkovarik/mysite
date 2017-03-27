@@ -1,0 +1,63 @@
+.resume {
+  overflow: hidden;
+}
+.header {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 3em;
+  padding-top: 2em;
+}
+.logo-container {
+  display: flex;
+  margin-top: 2em;
+  max-width: 24em;
+  margin: auto;
+  padding-top: 2em;
+}
+.logo-container a {
+  margin:  auto;
+}
+.logo-container img {
+  width: 4em;
+}
+
+.archive table {
+  margin: auto;
+  border-spacing: 2em 0;
+}
+
+/*Grid system for resume*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.grid {
+  clear: both;
+  padding: 0em;
+  margin: 0em;
+}
+.item {
+  display: block;
+  width: 44%;
+  float: left;
+}
+
+.right {
+  margin-left: 2%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 42em) {
+  .item {
+    width: 100%;
+  }
+}
