@@ -1,12 +1,13 @@
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: "Ubuntu", sans-serif;
+  line-height: 1.6;
 }
 
 body {
   margin: 0px;
-  background: #dedede;
+  background: #f9f9f9;
 }
 
 .header {
@@ -16,15 +17,17 @@ body {
   padding-top: 2em;
 }
 
+.header a {
+  color: inherit;      
+}
+
 .content {
   margin: auto;
   max-width: 32em;
 }
 .content-wrapper {
     max-width: 64em;
-    background: #f9f9f9;
     margin: 0 auto;
-    box-shadow: 10px 10px 5px #888888;
     padding-bottom: 4em;
 }
 .content figure {
@@ -55,6 +58,21 @@ a {
 
 .red {
     color: #d64937;
+}
+
+/* Logos*/
+.logo-container {
+  display: flex;
+  margin-top: 2em;
+  max-width: 24em;
+  margin: auto;
+  padding-top: 2em;
+}
+.logo-container a {
+  margin:  auto;
+}
+.logo-container img {
+  width: 4em;
 }
 
 
