@@ -1,0 +1,106 @@
+Make is a Static Site Generator
+===============================
+
+Static site generators are awesome. They are often used to create blogs
+that are cheap (often free), customizable, and markdown-friendly.
+Tech-savvy bloggers are increasingly choosing static site generators 
+over traditional blogging software and services like WordPress or
+tumblr.
+
+And there is no shortage of static site generators from which to choose.
+There are literally [hundreds] of them.
+
+But for the intrepid, consider instead using GNU Make. Many recognize
+Make as a build automation tool, often for C/C++ projects. But it can
+generate static sites too. This is because generating a static site is
+similar to compiling C source code. The difference really being the
+compiler that is used: `gcc` for C code vs. `kramdown` for markdown
+files.
+
+The following is a tutorial of how one might create and maintain a blog
+with GNU Make. If you are not too familiar with Make, it may help to
+reference the [manual] at times.
+
+
+Project Structure
+-----------------
+
+Consider a blog with the following file hierarchy:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.
+|__Makefile
+|__src/
+   |__templates/
+      |__ post_template.mustache
+      |__ index_template.mustache
+      |__ metadata.yaml
+   |__posts/
+      |__ favorite_recipes_2017.txt
+      |__ how_to_count_to_24.txt
+      |__ ...
+   |__static/
+      |__ main.css
+      |__ ...
+|__dest/
+   |___ ...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are two top-level directories. `src` contains the source files for
+the blog. And `dest` contains the built files that are to be deployed
+to the server.
+
+`src` contains three directories. `posts` contains markdown-formatted
+plain text files. `static` contains files that will be copied to `dest`
+directly. And `template` contains [mustache] templates as well as a
+YAML file or metadata. The metadata file contains a list of post URL's,
+titles, publication/modification dates, etc.
+
+Make Crash Course
+-----------------
+
+A Makefile contains a collection of rules. Each rule describes a step
+in a build process. And all rules have the following syntax:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+target: dependency1 dependency2 ...
+	command1
+	command2
+	...    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Every rule has a target, often times a file path. A rule may have any
+number of dependencies, which may be file paths or other rules. And
+rules may have any number of commands that the system will execute.
+The commands must be indented with a TAB character, not with spaces.
+
+For example, to upload the contents of `dest` to a server, the
+following rule may be applied:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+deploy: dest/
+	rsync -a dest/ user@8.8.8.8:/www --delete 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here, `rsync` is a really useful utility for syncing two directories,
+possibly remotely.
+
+In addition to containing rules, Makefiles have many features that
+resemble code. It is not uncommon to see variables, conditionals, and
+function calls in Makefiles. One can even define their own functions
+using GNU Guile, a Lisp-variant. But this is far beyond the scope of
+this short tutorial.
+
+Compiling Markdown
+------------------
+
+The `src/posts` directory contains markdown-formatted plain text files.
+These files must be converted to HTML. [kramdown] is my favorite
+markdown-to-HTML compiler. But unlike some of its competitors, kramdown
+does not support templating. So we use the mustache templating engine/
+format instead.
+
+[hundreds]: https://staticsitegenerators.net/
+[manual]: https://www.gnu.org/software/make/manual/
+[mustache]: https://mustache.github.io/
+[kramdown]: https://kramdown.gettalong.org/
