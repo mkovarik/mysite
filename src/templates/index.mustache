@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/main.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="static/favicon.ico">
   </head>
   <body>
     <div class="content-wrapper">
@@ -20,21 +21,18 @@
     </div>
     </div>
     <div class="archive content">
-      <h2>About me</h2>
-      <p>Rutgers grad student. My expertise is on applied mathematics, with a focus on quantitative finance.</p>
-      <ul>
-        <li><a href="static/resume.pdf">Resume</a></li>
-	<li><a href="static/businesscard.pdf">Business card</a></li>
-      </ul>
+      <p>Hi. My name is Michael Kovarik. I am an applied mathematician
+      completing the Rutgers <a href="http://finmath.rutgers.edu/">Mathematical Finance</a>
+      masters program. If you are an interested employer, please check out my
+      <a href="static/resume.pdf">resume</a>.</p>
       <h2>Blog</h2>
-      <dl>
+      <ul>
       {{#categories}}
-          <dt><strong>{{name}}</strong></dt>
 	  {{#posts}}
-          <dd><a href="posts/{{url}}.html">{{title}}</a></dd>
+      <li><a href="posts/{{url}}.html">{{title}}</a></li>
 	  {{/posts}}
       {{/categories}}
-      </dl>
+      </ul>
     </div>
   </div>
   </body>

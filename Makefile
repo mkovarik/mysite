@@ -1,8 +1,8 @@
 POSTS := $(patsubst src/posts/%.txt, dest/posts/%.html,$(wildcard src/posts/*.txt))
 
 all: build deploy
-build: index static $(POSTS)
-index:
+build: dest/index.html static $(POSTS)
+dest/index.html:
 	mustache src/templates/index.yaml src/templates/index.mustache > dest/index.html
 static:
 	rsync -r src/static/ dest/static/ --delete
