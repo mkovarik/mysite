@@ -32,6 +32,7 @@ body {
 }
 .content figure {
   max-width: inherit;
+  margin: 0;
 }
 .content figure img {
   max-width: inherit;
