@@ -26,8 +26,6 @@ calculus, it does not cover many essential theoretical results
 (Feynman-Kac, Girsanov, martingale representation theorem) that
 quants are expected to be familiar with.
 
-The first volume covers the binomial tree model. I would ignore it.
-
 ### Time Series Analysis ###
 *by James Hamilton*
 
@@ -41,4 +39,4 @@ cannot validate it.
 
 Machine learning skills are becomming increasingly valuable in all
 industries. And in quant finance, ML is replacing stochastic calculus
-as the essential skillset. This text
+as the most important skillset. 
