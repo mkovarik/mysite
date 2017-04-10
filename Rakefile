@@ -3,8 +3,8 @@ require 'rake'
 
 # Create homepage
 directory "dest"
-index_template = "src/templates/index.mustache"
-metadata = "src/templates/index.yaml"
+index_template = "src/index.mustache"
+metadata = "src/index.yaml"
 task :homepage => ["dest", index_template, metadata] do
   sh "mustache #{metadata} #{index_template} > dest/index.html"
 end
@@ -13,7 +13,7 @@ end
 directory "dest/posts"
 posts_md = Dir.glob('src/posts/*.txt')
 posts_html = []
-post_template = 'src/templates/post_template.html'
+post_template = 'src/post_template.html'
 posts_md.each do |post|
   target = Pathname(post).basename.to_s
   target = 'dest/posts/' + target.ext('html')
