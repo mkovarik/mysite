@@ -1,15 +1,18 @@
 categories:
   - name: Finance
     posts:
-      - title: Diffusion Processes
-        url: diffusion_processes
-      - title: Parameter Calibration
-        url: parameter_calibration
-      - title: Monte Carlo
-        url: monte_carlo
-      - title: "Black-Scholes Formula"
-        url: black_scholes_formula
-      - title: Four Essential Quant Books
-        url: four_essential_quant_books
+      - title: "Delta Hedging"
+        url:   "delta_hedging"
+        date:  "2017.04.13"
+      - title: "Four Essential Quant Books"
+        url:   "four_essential_quant_books"
+        date:  "2017.04.06"
+      - title: "SDE Calibration"
+        url:   "sde_calibration"
+        date:  "2017.04.01"
+      - title: "SDE Simulation"
+        url:   "sde_simulation"
+        date:  "2017.01.07"
       - title: "Black-Scholes Demo"
-        url: black_scholes_demo
+        url:   "black_scholes_demo"
+        date:  "2016.12.22"

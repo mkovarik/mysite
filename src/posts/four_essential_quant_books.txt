@@ -8,7 +8,7 @@ category: Finance
 Quantitative finance learners and practitioners are blessed with a large
 library of technical literature. It can feel overwhelming. However, most
 of the essential practical and theoretical knowledge is contained in
-just four books.
+only four books.
 
 ### Options, Futures, and Other Derivatives ###
 *By John Hull*
