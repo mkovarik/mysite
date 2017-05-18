@@ -1,23 +1,24 @@
-% Delta Hedging
+#+TITLE: Delta Hedging
 
-**Hedging** is the act of taking two positions with negatively
-correlated returns so as to minimize risk. If one position loses value,
-the other position will likely gain value, thus minimizing possible
-losses.
+*Hedging* is the act of taking two positions with negatively correlated
+returns so as to minimize risk. If one position loses value, the other
+position will likely gain value, thus minimizing possible losses.
 
 Delta hedging applies this idea to derivatives. Equity derivatives, for
-example, have returns correlated with the underlying stock returns.  If
+example, have returns correlated with the underlying stock returns. If
 they are positively correlated, as in the case with call options, we
 long the derivative and short the stock. If certain assumptions are
 made, then such a hedging strategy can eliminate risk entirely and
 create arbitrage opportunities.
 
 The caveat is that our two-factor portfolio must be continuously
-rebalanced with an active hedging strategy. This is known as **dynamic
-hedging**.
+rebalanced with an active hedging strategy. This is known as *dynamic
+hedging*.
 
-
-### Underlying Theory ###
+*** Underlying Theory
+    :PROPERTIES:
+    :CUSTOM_ID: underlying-theory
+    :END:
 
 Consider a portfolio consisting of longing an equity derivative and
 shorting $\Delta (t)$ units of the underlying security at time $t$. The
@@ -62,16 +63,19 @@ $$\mathcal L V = r (V - \Delta \cdot X).$$
 
 This is a generalization of the Black-Scholes PDE.
 
-### Synthetic Derivatives ###
+*** Synthetic Derivatives
+    :PROPERTIES:
+    :CUSTOM_ID: synthetic-derivatives
+    :END:
 
 In general, a hedging strategy for a financial derivative also provides
 a way to create that derivative synthetically. This is done by creating
-a **replicating portfolio** that has the same value as the financial
+a *replicating portfolio* that has the same value as the financial
 derivative.
 
 The fully hedged ("delta neutral") portfolio $\Pi$ has the same value
 process as a bank account with interest rate $r$. So let $B$ be the
-value of the bank account. Then 
+value of the bank account. Then
 
 $$V = B + \Delta \cdot X.$$
 
@@ -82,8 +86,8 @@ This fact can be used to price derivatives. Suppose the underlying is a
 non-dividend paying stock whose dynamics is of an exponential Brownian
 motion with drift $\mu_0$ and volatility $\sigma_0$.
 
-The Black-Scholes formula asserts that the fair value  of a European
-call option with expiry $T$ and strike $K$ is given by
+The Black-Scholes formula asserts that the fair value of a European call
+option with expiry $T$ and strike $K$ is given by
 
 $$V(t) = X(t) \Phi (d_+) - e^{-r (T-t)}K \Phi (d_-),$$
 
@@ -98,3 +102,4 @@ $$\begin{aligned}
 \Delta (t) &= N(d_+). \\
 B(t)       &= - e^{-r(T-t)} K N(d_-).
 \end{aligned}$$
+
