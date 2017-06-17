@@ -35,11 +35,11 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2, h3 {
   text-align: center;
 }
 h3 {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 a {
