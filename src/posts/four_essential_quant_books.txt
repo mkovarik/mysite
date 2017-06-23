@@ -6,50 +6,50 @@ library of technical literature. It can feel overwhelming. However, most
 of the essential practical and theoretical knowledge is contained in
 only four books.
 
-*** Options, Futures, and Other Derivatives
-    :PROPERTIES:
-    :CUSTOM_ID: options-futures-and-other-derivatives
-    :END:
+*** Paul Wilmott on Quantitative Finance
 
-/By John Hull/
+This 1300-page tome covers just about everything that needs to be
+known by aspiring quants. It covers the theory and practice of 
+derivatives pricing. It is also very opinionated and informal.
+It is sorta like /Feynman's Lectures on Physics/, but for finance.
 
-This is the go-to tome of finance for the unitiated mathematician. It is
-only somewhat technical, but it contains much essential knowledge and
-insight of the modern derivatives market.
+*** The Princeton Companion to Applied Mathematics
 
-*** Stochastic Calculus for Finance II: Continuous-Time Models
-    :PROPERTIES:
-    :CUSTOM_ID: stochastic-calculus-for-finance-ii-continuous-time-models
-    :END:
-
-/By Steven Shreve/
-
-This is the text that is loved (or hated) by every Rutgers MSMF student.
-While Hull provides a perfunctory treatment of stochastic calculus, it
-does not cover many essential theoretical results (Feynman-Kac,
-Girsanov, martingale representation theorem) that quants are expected to
-be familiar with.
+It is a good idea to have a broad understanding of mathematical modeling
+outside of finance. Technical encyclopedias are really good at doing
+that sort of thing.
 
 *** Time Series Analysis
-    :PROPERTIES:
-    :CUSTOM_ID: time-series-analysis
-    :END:
 
-/by James Hamilton/
+/By James Hamilton/
 
-Hamilton covers the essentials of time series analysis: calibration,
-forcasting, and model selection. These are topics sorely missing from
-Shreve. Its nice to have a financial model. But it is worthless if you
-cannot validate it.
+Hamilton covers all of the essentials of time series analysis:
+calibration, forecasting, and model selection. Most financial models are
+presented as time series. Stochastic differential equations, for
+example, can be thought of as a type of time series model.
 
 *** Deep Learning
-    :PROPERTIES:
-    :CUSTOM_ID: deep-learning
-    :END:
 
 /By Ian Goodfellow, Yoshua Bengio, and Aaron Courville/
 
-Machine learning skills are becomming increasingly valuable in all
-industries. And in quant finance, ML is replacing stochastic calculus as
-the most important skillset.
+Machine learning skills are becoming increasingly valuable. 
+It is quickly replacing stochastic calculus as the most important
+technical skill.
 
+Deep learning employs artificial neural nets to make complex decisions.
+There are enticing opportunities to profit from this emerging technology.
+But very few people (quants included) have any understanding of it. So
+deep learning is a new source of opportunity.
+
+*** Worthy Mentions
+
+In alphabetical order:
+
+
+- /Financial Risk Manager Handbook/ by Phillipe Jorion.
+- /Introduction to Algorithms/ by Thomas Cormen, Charles Leiserson,
+  Ronald Rivest, and Clifford Stein.
+- /Options, Futures, and Other Derivatives/ by John Hull.
+- /Statistics Done Wrong/ by Alex Reinhart.
+- /Stochastic Calculus for Mathematical Finance, Volume II/ by Steven
+  Shreve.
