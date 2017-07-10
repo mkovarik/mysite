@@ -1,18 +1,10 @@
 # Week 1 (July 10 - 13)
 
-This is the first week of Stats II! This week is spent reviewing
-essential material from Stats I as well as introducing some new
-material.
+This is the first week of Stats II! We will mostly review material
+learnt in Stats I.
 
-* **Monday, July 10**: Syllabus day! We also review some properties
-  of the standard normal distribution.
-* **Tuesday, July 11**: We discuss some import families of probability
-  distributions: the t-distributions, the chi-squared distributions,
-  and the F-distributions.
-* **Wednesday, July 12**: We discuss the hypothesis testing methodology
-  at a high level.
-* **Thursday, July 13**: We discuss statistical programming in the R
-  coding language.
+The contents of this week is covered in:
 
-There is a lab due Monday, July 17. This lab covers the basics of coding
-in R. 
+* *Introductory Statistics*: sections 8.1, 8.2, 8.3, 9.1, 9.2, 9.3,
+  9.4, 9.5, 9.7.
+* *OpenIntro Statistics*: chapter 4, sections 5.1, 5.4. 
