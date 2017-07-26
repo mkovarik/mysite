@@ -21,7 +21,7 @@ body {
   color: inherit;      
 }
 
-.content {
+#content, .content {
   margin: auto;
   max-width: 32em;
 }
@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     padding-bottom: 4em;
 }
-.content img {
+#content img, .content img {
   max-width: 100%;
   margin: 0;
 }
@@ -38,7 +38,7 @@ body {
 h1, h2, h3 {
   text-align: center;
 }
-h3 {
+h3, #content h2 {
     font-size: 1em;
 }
 
