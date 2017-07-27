@@ -1,4 +1,4 @@
 title = "MATH 111 Lecture Notes"
 author = "Michael Kovarik"
 src = "."
-dest = "../../../dest/math111/"
+dest = "../../dest/math111/"
