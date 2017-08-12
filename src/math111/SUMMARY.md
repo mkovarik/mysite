@@ -23,3 +23,6 @@
     - [Lecture: August 03](20_lecture.md)
 - [Week 5: Statistical Computing](21_week.md)
     - [Test: August 07](22_test.md)
+    - [Lecture: August 08](23_lecture.md)
+    - [Lecture: August 09](24_lecture.md)
+    - [Lecture: August 10](25_lecture.md)
