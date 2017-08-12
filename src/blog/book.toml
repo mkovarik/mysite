@@ -1,0 +1,4 @@
+title = "Blog"
+author = "Michael Kovarik"
+src = "."
+dest = "../../dest/blog/"

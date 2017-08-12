@@ -1,13 +1,12 @@
-POSTS := $(patsubst src/blog/%.org, dest/blog/%.html,$(wildcard src/blog/*.org))
-
 all: build deploy
-build: dest/index.html static $(POSTS) math111
+.PHONY: clean static build math111 depoloy blog 
+build: dest/index.html static blog math111
 dest/index.html: src/index.yaml src/index.mustache
 	mustache $^ > $@
 static:
 	rsync -r src/static/ dest/static/ --delete
-dest/blog/%.html: src/blog/%.org src/post_template.html
-	pandoc $< -s --from=org --to=html5 --template=src/post_template.html --katex > $@
+blog:
+	mdbook build src/blog/
 math111:
 	mdbook build src/math111/ 
 deploy:

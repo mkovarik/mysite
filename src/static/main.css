@@ -17,7 +17,7 @@ body {
   padding-top: 2em;
 }
 
-.header a {
+.menu-bar a {
   color: inherit;      
 }
 
@@ -132,6 +132,13 @@ https://github.com/azerupi/mdBook */
 }
 .sidebar-hidden .sidebar {
   left: -300px;
+}
+:not(pre) > .hljs {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    color: #6e6b5e;
 }
 .sidebar-visible .sidebar {
   left: 0;
