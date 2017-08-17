@@ -26,3 +26,8 @@
     - [Lecture: August 08](23_lecture.md)
     - [Lecture: August 09](24_lecture.md)
     - [Lecture: August 10](25_lecture.md)
+- [Week 6: Miscellany](26_week.md)
+    - [Lecture: August 14](27_lecture.md)
+    - [Lecture: August 15](28_lecture.md)
+    - [Lecture: August 16](29_lecture.md)
+    - [Final: August 17](30_final.md)
