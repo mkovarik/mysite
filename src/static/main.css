@@ -18,7 +18,7 @@ body {
 }
 
 .menu-bar a {
-  color: inherit;      
+  color: inherit;
 }
 
 .content {
@@ -38,7 +38,7 @@ h1, h2, h3 {
   text-align: center;
 }
 a h1, a h2, a h3 {
-    color: #222; 
+    color: #222;
 }
 h3, #content h2 {
     font-size: 1em;
@@ -80,7 +80,13 @@ a {
 /* Tables */
 table, th, td {
   margin: auto;
-  border: 1px solid #2d2d2d;
+  border-collapse: collapse;
+}
+td {
+    padding-right: 1em;
+}
+tr:nth-child(odd) td {
+    background: #DCDCDC;
 }
 
 /* Definition lists */
@@ -99,7 +105,7 @@ pre code {
   white-space: pre;
 }
 
-/* The following is taken from mdbook: 
+/* The following is taken from mdbook:
 https://github.com/azerupi/mdBook */
 
 .sidebar {
