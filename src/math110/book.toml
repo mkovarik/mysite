@@ -1,0 +1,4 @@
+title = "MATH 110 Lecture Notes"
+author = "Michael Kovarik"
+src = "."
+dest = "../../dest/math110/"
