@@ -34,6 +34,7 @@ statistics:
 * [Statistics StackExchange](https://stats.stackexchange.com/) is an
   excellent Q&A site for statistics. Make sure to "Google" any question
   you have before posting your own.
+* [Wikipedia](https://www.wikipedia.org/)
 
 [khan]: https://www.khanacademy.org/math/statistics-probability
 [localcwik]: https://help.libreoffice.org/Calc/Instructions_for_Using_Calc
