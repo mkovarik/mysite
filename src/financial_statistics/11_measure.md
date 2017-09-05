@@ -44,14 +44,25 @@ The collection \\(\mathcal F\\) must satisfy the properties of a **sigma algebra
 Note that by [De Morgan's laws][demorg], the first three properties imply the fourth
 to be true.
 
-Properties 2 - 4 allow for one to construct new events using logic. For example, let
-\\(A\\) and \\(B\\) be events. Then \\(\Omega - A\\) is the event of \\(A\\) not occurring,
-\\(A \cap B\\) is the event of both \\(A\\) and \\(B\\) occurring, and \\(A \cup B\\) is the
-event of at least one of \\(A\\) or \\(B\\) occurring. The pair \\((\Omega, \mathcal F)\\) is
-known as a **measurable space**.
+Properties 2 - 4 allow for one to construct new events using logic. For
+example, let \\(A\\) and \\(B\\) be events. Then \\(\Omega - A\\) is the
+event of \\(A\\) not occurring, \\(A \cap B\\) is the event of both
+\\(A\\) and \\(B\\) occurring, and \\(A \cup B\\) is the event of at
+least one of \\(A\\) or \\(B\\) occurring. The pair \\((\Omega, \mathcal
+F)\\) is known as a **measurable space**.
 
-A **probability measure** over such a measurable space is a function \\(P : \mathcal F \to 
-[0,1] \\) satisfying the following two properties:
+The intersection of a (possibly uncountable) family of sigma-algebras is
+itself a sigma algebra. It is therefore permissible to construct
+sigma-algebras defined as the "smallest" sigma-algebra satisfying some
+given property.
+
+For example, let \\(T\\) be a topological space
+
+
+### Probability Measures 
+
+A **probability measure** over such a measurable space is a function
+\\(P : \mathcal F \to [0,1] \\) satisfying the following two properties:
 
 1. \\(P(\Omega) = 1\\)
 2. If \\(E_1, E_2, \ldots \\) is a countable family of disjoint ("mutually exclusive") events,
@@ -60,18 +71,41 @@ A **probability measure** over such a measurable space is a function \\(P : \mat
   
 Events that occur with probability 1 are said to occur **almost surely**.
 
-### Properties
+Some immediate consequences of probability measures are as follows:
 
-Some immediate consequences of the probability measure are as follows:
-
-* Inclusion-exclusion: \\(P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)\\)
-* Continuity: Suppose that \\(E_n \nearrow E \\). Then \\(P(E) = \lim P(E_n)\\).
+* \\(0 \leq P(E) \leq 1\\)
+* \\(P(\Omega - E) = 1 - P(E)\\)
+* \\(P(\emptyset) = 0\\)
+* If \\( E_1 \subset E_2\\), then \\(P(E_1) \leq P(E_2\\)
+* \\(P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)\\)
+  ("inclusion-exclusion")
+* If \\(E_n \nearrow E \\), then \\(P(E) = \lim P(E_n)\\)
 
 Here, \\(E_n \nearrow E\\) means that \\(E_n\\) is a subset of \\(E_{n+1}\\) for
 all positive integers \\(n\\) and that \\(E = \bigcup E_n\\).
 
 ### Random variables
 
+A **random variable** is a function of the form \\(X: \Omega \to
+\bf{R}\\). A random variable is said to be **measurable** with respect
+to the sigma-algebra \\(\mathcal F\\) if the preimage \\(X^{-1} (B)\\)
+of every Borel subset \\(B \subset \bf{R}\\) belongs in \\(\mathcal
+F\\):
+
+\\[B \in \mathcal B (\mathbf R) \implies X^{-1}(B) \in \mathcal F.\\]
+
+\\(X\\) is then said to be \\(\mathcal F\\)**-measurable**. We denote
+\\(\sigma (X)\\) to be the smallest sigma-algebra for which \\(X\\)
+is measurable.
+
+Measurability is important, because it allows one to discuss
+probabilities related to random variables. Let \\(P\\) be a probability
+measure on \\(\mathcal F\\). Then the equation
+
+\\[P_X (B) = P(X^{-1} (B))\\]
+
+describes a probability measure on \\(\mathcal B (\mathbf R)\\). For
+brevity, we write expressions like \\(P(X < 0)\\) to mean
+\\(P_X((-\infty, 0])\\).
+
 [demorg]: https://en.wikipedia.org/wiki/De_Morgan%27s_laws
-
-
