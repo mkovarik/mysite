@@ -1,9 +1,10 @@
-09-07
+09-07 Sample mean, variance, standard deviation
 
-09-12
-09-14
+09-12 Robust statistics (median, quartiles, range, 5-number summary,
+      IQR, outliers)
+09-14 Plots (Histogram, Stem-and-Leaf, Box plot)
 
-09-19
+09-19 
 09-21
 
 09-26

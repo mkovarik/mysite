@@ -6,7 +6,7 @@ course-related news.
 
 * Syllabus ([odt](static/syllabus.odt), [pdf](static/syllabus.pdf))
 * Formula sheet ([pdf](static/formula_sheet.pdf))
-* Survey ([pdf](static/survey.pdf))
+* Survey ([link](https://goo.gl/forms/XUuqlTk7s6Hg9h642))
 
 ### Useful software
 
