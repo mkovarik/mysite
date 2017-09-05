@@ -65,6 +65,12 @@ a {
 .red {
     color: #d64937;
 }
+.spoiler {
+    background-color: #222;
+}
+.spoiler:hover {
+    background-color: inherit;
+}
 
 /* Logos*/
 .logo-container {
