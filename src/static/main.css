@@ -14,7 +14,9 @@ body {
     margin: 0px;
     background: #f9f9f9;
 }
-
+# content h1 {
+    font-size: 1.3em;
+}
 .header {
     text-align: center;
     overflow: hidden;
