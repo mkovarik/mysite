@@ -1,0 +1,17 @@
+# Homework
+
+Some of these problems requires Pearson's MyStatLab (also called "MyLab
+Statisitcs"). The CourseID for this class is: kovarik24019
+
+### Due September 12
+
+1. Complete "Assignment 01" in MyStatLab.
+2. The file [gpa.txt](static/gpa.txt) contains a
+   [stem-and-leaf diagram][sl] displaying the grade point
+   averages (GPAs) of a sample of twenty students. Calculate
+   the sample mean, variance, and standard deviation.
+  *Challenge mode*: calculate the sample mean and variance
+  by hand. (Answer: <span class="spoiler">mean=2.97, variance =
+  1.324, standard deviation =1.151</span>)
+3. Read the following sections from the course text: 3.1, 3.2, 3.4,
+   2.3, 2.4, 2.5.
