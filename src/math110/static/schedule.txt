@@ -4,13 +4,13 @@
       IQR, outliers)
 09-14 Plots (Histogram, Stem-and-Leaf, Box plot)
 
-09-19 
-09-21
+09-19 Probability (equal probability, events, frequencies)
+09-21 Probabilities
 
-09-26
+09-26 
 09-28
 
-10-03
+10-03 Experimental design
 10-05
 
 10-10 TEST I
