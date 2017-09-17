@@ -17,6 +17,7 @@ Statistics"). The CourseID for this class is: kovarik24019
     - The five-number summary. (Answer: <span class="spoiler">0.12 0.255 0.292 0.345 0.44</span>)
     - The interquartile range (Answer: <span class="spoiler">0.09</span>)
 3. Create a stem-and-leaf plot for the above data set.
+4. Read the following sections from the course text: 1.2, 1.3, 4.1, 4.2
 
 ### Due September 12
 
