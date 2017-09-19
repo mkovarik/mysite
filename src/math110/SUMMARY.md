@@ -3,3 +3,4 @@
 [09-07: Descriptive Statistics](0907.md)
 [09-12: Descriptive Statistics II](0912.md)
 [09-14: Descriptive Statistics III](0914.md)
+[09-19: Probability Theory I](0919.md)

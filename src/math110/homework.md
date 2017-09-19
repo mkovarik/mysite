@@ -3,6 +3,24 @@
 Some of these assignments require Pearson's MyStatLab (also called "MyLab
 Statistics"). The CourseID for this class is: kovarik24019
 
+### Due September 26
+
+1. Complete "Assignment 03" in MyStatLab
+2. Let \\(\Omega =\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \\}\\) denote the
+   outcome space corresponding to rolling a ten-sided die. And consider
+   the following events:
+   \\[\begin{aligned}
+   A &= \{ 2, 4, 6, 8, 10   \} \\\\
+   B &= \{ 1, 2, 3, 4, 5, 6 \}
+   \end{aligned}\\]
+   List all outcomes in the following events:
+   - \\(\text{not } A\\) (Answer: <span class = "spoiler">{1,3,5,7,9}</span>)
+   - \\(A \text{ or } B\\)  (Answer: <span class = "spoiler">{1, 2, 3, 4, 5, 6, 8, 10}</span>)
+   - \\(A \text{ and } B\\)  (Answer: <span class = "spoiler">{2, 4, 6}</span>)
+   - \\(\text{not } (A \text{ and } B) \\)  (Answer: <span class = "spoiler">{1, 3, 5, 7, 8, 9, 10}</span>)
+   - \\(\text{not } A \text{ or not } B\\) (Answer: <span class = "spoiler">{1, 3, 5, 7, 8, 9, 10}</span>)
+3. Read sections 4.3, 4.4, 4.5, and 4.6 in the course text.
+
 ### Due September 19
 
 1. Complete "Assignment 02" in MyStatLab
