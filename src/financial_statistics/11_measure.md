@@ -1,65 +1,78 @@
 # Probability Measures
 
-**Probability** is a measure of uncertainty. Events that are guaranteed to occur
-are assigned a probability of 1. Events that are guaranteed not to occur are
-assigned a probability of 0. Events that may or may not occur are assigned a
-probability between 0 and 1. Higher probability indicate that the event is more
-likely to occur.
 
-### Probability spaces
+Probability theory formalizes the notions of uncertainty and randomness.
+The probability of an event (a collection of outcomes) measures the
+degree of certainty that the event will actually occur. Certain events
+occur with probability 1. Impossible events occur with probability 0.
 
-It is important that we understand the sort of objects to which we assign
-probabilities. Intuitively, we may envision a set \\(\Omega\\) of possible
-"outcomes". For example, in rolling a six-sided die, the outcomes are:
 
-\\[\Omega = \\{ 1, 2, 3, 4, 5, 6 \\}. \\]
+## Sigma algebras
 
-Assuming the die is fair, we may assign each of these outcomes a probability of
-one-sixth.
+The result of a random process is an "outcome". The space of possible
+outcomes forms a set \\(\Omega\\). For finite outcome spaces, it is
+sufficient to simply assign a probability to each outcome.
 
-Such a procedure is admissible if the collection of outcomes is finite. However,
-this way of thinking is problematic for when \\(\Omega\\) is a continuum of
-values. In such cases, it is typical that each outcome \\(\omega \in \Omega \\)
-is assigned a probability of zero. But such an assignment cannot possibly yield
-a complete description of randomness. So instead probabilities are assigned to
-"measurable regions" in \\(\Omega\\).
+For continuous outcome spaces, however, it is sensible to assign
+probabilities instead to "events", which are sets of possible outcomes.
+However, when \\(\Omega\\) is continuous, it is possible to construct
+subsets with highly pathalogical properties (see the
+[Banach-Tarski paradox][btwik]). It would be difficult to meaningfully
+assign probabilities to such sets. It is not desirable to let a *any*
+subset of \\(\Omega\\) be considered an event. Instead, events are
+restricted to belong to some class \\(\mathcal{F}\\) of subsets of
+\\(\Omega\\). This class should exclude pathaological subsets, but also
+be large enough to accomodate the needs of probability.
 
-More precisely, probabilities are assigned to *events* rather than outcomes. An
-**event** is a collection of possible outcomes. Mathematically, it is a subset
-of the outcome space \\(\Omega\\). But is not generally the case that any subset
-of \\(\Omega\\) suffices as an event. Instead, a collection \\(\mathcal F\\) of
-events is specified *a priori*.
-
-The collection \\(\mathcal F\\) must satisfy the properties of a **sigma algebra**
-(sometimes called a *sigma field*):
+Formally, \\(\mathcal F\\) must be a **sigma algebra** (sometimes called
+a **sigma field**). That is, it must obey the following properties: 
 
 1. \\(\Omega \in \mathcal F\\).
-2. \\(\mathcal F\\) is closed under complementation (\\(E \in \mathcal F
-   \implies \Omega - E \in \mathcal F \\)).
-3. \\( \mathcal F \\) is closed under countable union (\\(E_n \in \mathcal F
-   \implies \bigcup_{n=1}^{\infty} E_n \in \mathcal F \\)).
-4. \\(\mathcal F\\) is closed under countable intersection \\(E_n \in \mathcal F
-   \implies \bigcap_{n=1}^{\infty} E_n \in \mathcal F \\).
+2. \\(\mathcal F\\) is closed under complementation:
+   (\\(E \in \mathcal F \implies \Omega - E \in \mathcal F \\)).
+3. \\( \mathcal F \\) is closed under countable unions:
+   (\\(E_n \in \mathcal F \implies \bigcup_{n=1}^{\infty} E_n \in
+   \mathcal F \\)).
+4. \\(\mathcal F\\) is closed under countable intersections: \\(E_n \in
+   \mathcal F \implies \bigcap_{n=1}^{\infty} E_n \in \mathcal F \\).
 
-Note that by [De Morgan's laws][demorg], the first three properties imply the fourth
-to be true.
+Note that by [De Morgan's laws][demorg], the first three properties
+imply the fourth to be true. That is, the first three properties are
+typically used as *axioms* of sigma algebras.
 
-Properties 2 - 4 allow for one to construct new events using logic. For
-example, let \\(A\\) and \\(B\\) be events. Then \\(\Omega - A\\) is the
-event of \\(A\\) not occurring, \\(A \cap B\\) is the event of both
-\\(A\\) and \\(B\\) occurring, and \\(A \cup B\\) is the event of at
-least one of \\(A\\) or \\(B\\) occurring. The pair \\((\Omega, \mathcal
-F)\\) is known as a **measurable space**.
+Sigma algebras are robust in that they allow for events to be combined
+in many ways using "logic". To illustrate, suppose \\(E_1\\) and \\(E_2\\)
+denote two events in some sigma-algebra. Then:
 
-The intersection of a (possibly uncountable) family of sigma-algebras is
-itself a sigma algebra. It is therefore permissible to construct
-sigma-algebras defined as the "smallest" sigma-algebra satisfying some
-given property.
+* The complement of an event consists of all outcomes *not* in the event.
+  So \\(E_1^c\\) can be written as "not \\(E_1\\)".
+* The intersection of two events consists of all outcomes occurring in
+  *both* events. So \\(E_1 \cap E_2\\) can be written as "\\(E_1\\) and
+  \\(E_2\\)".
+* The union of two events consists of all outcomes occuring in one or
+  both events. So \\(E_1 \cup E_2\\) can be written as as "\\(E_1\\)
+  or \\(E_2\\)".
 
-For example, let \\(T\\) be a topological space
+The following theorem, which is quite trivial to prove, is quite
+useful for constructing sigma algebras:
 
+**Theorem.** The intersection of any family of sigma algebras is
+itself a sigma algebra. ■
 
-### Probability Measures 
+This theorem allows one to construct a minimal sigma algebra satisfying
+some property by taking the intersection of all sigma algebras
+satisfying that property.
+
+For example, let \\(T\\) be a topological space. Then \\(\mathcal B
+(T)\\) denotes the smallest sigma algebra containing every open set of
+\\(T\\). The members of this algebra are called **Borel subsets** of
+\\(T\\).
+
+The tuple \\(\Omega, \mathcal F\\) consisting of a set of "outcomes"
+\\(\Omega\\) and a set \\(\mathcal F\\) of "events" forms a
+**measurable space**.
+
+## Probability Measures 
 
 A **probability measure** over such a measurable space is a function
 \\(P : \mathcal F \to [0,1] \\) satisfying the following two properties:
@@ -81,31 +94,10 @@ Some immediate consequences of probability measures are as follows:
   ("inclusion-exclusion")
 * If \\(E_n \nearrow E \\), then \\(P(E) = \lim P(E_n)\\)
 
+
+
 Here, \\(E_n \nearrow E\\) means that \\(E_n\\) is a subset of \\(E_{n+1}\\) for
 all positive integers \\(n\\) and that \\(E = \bigcup E_n\\).
 
-### Random variables
-
-A **random variable** is a function of the form \\(X: \Omega \to
-\bf{R}\\). A random variable is said to be **measurable** with respect
-to the sigma-algebra \\(\mathcal F\\) if the preimage \\(X^{-1} (B)\\)
-of every Borel subset \\(B \subset \bf{R}\\) belongs in \\(\mathcal
-F\\):
-
-\\[B \in \mathcal B (\mathbf R) \implies X^{-1}(B) \in \mathcal F.\\]
-
-\\(X\\) is then said to be \\(\mathcal F\\)**-measurable**. We denote
-\\(\sigma (X)\\) to be the smallest sigma-algebra for which \\(X\\)
-is measurable.
-
-Measurability is important, because it allows one to discuss
-probabilities related to random variables. Let \\(P\\) be a probability
-measure on \\(\mathcal F\\). Then the equation
-
-\\[P_X (B) = P(X^{-1} (B))\\]
-
-describes a probability measure on \\(\mathcal B (\mathbf R)\\). For
-brevity, we write expressions like \\(P(X < 0)\\) to mean
-\\(P_X((-\infty, 0])\\).
-
 [demorg]: https://en.wikipedia.org/wiki/De_Morgan%27s_laws
+[btwik]: https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox
