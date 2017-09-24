@@ -3,7 +3,13 @@
 Some of these assignments require Pearson's MyStatLab (also called "MyLab
 Statistics"). The CourseID for this class is: kovarik24019
 
-### Due September 26
+
+### Due before October 03
+
+1. Complete "Assignment 04" in MyStatLab
+2. Read sections 5.1, 5.2, and 5.3 in the course text.
+
+### Due before September 26
 
 1. Complete "Assignment 03" in MyStatLab
 2. Let \\(\Omega =\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \\}\\) denote the
@@ -21,7 +27,7 @@ Statistics"). The CourseID for this class is: kovarik24019
    - \\(\text{not } A \text{ or not } B\\) (Answer: <span class = "spoiler">{1, 3, 5, 7, 8, 9, 10}</span>)
 3. Read sections 4.3, 4.4, 4.5, and 4.6 in the course text.
 
-### Due September 19
+### Due before September 19
 
 1. Complete "Assignment 02" in MyStatLab
 
@@ -37,7 +43,7 @@ Statistics"). The CourseID for this class is: kovarik24019
 3. Create a stem-and-leaf plot for the above data set.
 4. Read the following sections from the course text: 1.2, 1.3, 4.1, 4.2
 
-### Due September 12
+### Due before September 12
 
 1. Complete "Assignment 01" in MyStatLab.
 2. The file [gpa.txt](static/gpa.txt) contains a
