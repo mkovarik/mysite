@@ -1,7 +1,7 @@
 all: build deploy
 .PHONY: clean static build math111 depoloy blog math110 financial_statistics
 build: dest/index.html static blog math111 math110 financial_statistics
-dest/index.html: src/index.yaml src/index.mustache
+dest/index.html: src/blog/index.yaml src/index.html
 	mustache $^ > $@
 static:
 	rsync -r src/static/ dest/static/ --delete

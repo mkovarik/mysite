@@ -145,6 +145,10 @@ https://github.com/azerupi/mdBook */
     .sidebar {
         left: -300px;
     }
+    .page-wrapper {
+    left: 15px;
+    padding-right: 15px;
+  }
 }
 .sidebar code {
     line-height: 2em;
