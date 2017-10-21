@@ -7,4 +7,7 @@
 [09-21: Probability Theory II](0921.md)
 [09-26: Probability Theory III](0926.md)
 [09-28: Probability Theory IV](0928.md)
+[10-05: Probability Theory VI](1005.md)
 [10-10: Test I](1010.md)
+[10-17: Probability Theory VII](1017.md)
+[10-18: Probability Theory VIII](1019.md)

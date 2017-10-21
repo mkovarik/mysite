@@ -4,6 +4,59 @@ Some of these assignments require Pearson's MyStatLab (also called "MyLab
 Statistics"). The CourseID for this class is: kovarik24019
 
 
+### Due before October 24.
+
+1. Do "Assignment 06" in MyStatLab.
+2. Study for the make up test, if you plan on taking it.
+3. Read chapter 7 (all sections).
+
+### Due before October 17.
+
+1. Ask yourself the following questions:
+    
+    - Will I complete every homework problem?
+    - Will I complete the readings and make thorough notes?
+    - Will I put in a MINIMUM of six hours studying each and every week?
+   
+   If the answer of any of these questions is a "no", my recommendation
+   is to drop the course.
+2. Read chapter 6 (except 6.5, which is optional).
+
+
+### Due before October 10
+
+1. Complete "Assignment 05" in MyStatLab
+2. Let \\(X\\) be a Binomial random variable with \\(n=6\\) and \\(p=0.4\\).
+    - Complete the following table:
+      ```
+      x | P(X=x)
+      --+-------
+      0 | ??????
+      1 | ??????
+      2 | ??????
+      3 | ??????
+      4 | 0.1382
+      5 | 0.0368
+      6 | ??????
+      ```
+    - Use the above table and the following formulas to compute the mean and
+      standard deviation of \\(X\\):
+      \\[\begin{aligned}
+      \mu &= \sum x_i P(X=x_i) \\\\
+      \sigma &= \sqrt{\sum (x_i - \mu)^2 P(X=x_i)}
+      \end{aligned}\\]
+      (Answer: <span class="spoiler">mean = 2.4, stdev = 1.2</span>)
+    - Calculate the mean and standard deviation of \\(X\\) by using using the
+      following formulas:
+      \\[\begin{aligned}
+      \mu &= np \\\\
+      \sigma &= \sqrt{np(1-p)}
+      \end{aligned}\\]
+      Do these values match those found in the previous question?
+    - Calculate \\(P(X \geq 5)\\) (Answer: <span class="spoiler">4.096%</span>).
+3. Study for Test I. The best way of doing so is to review your homework
+   (you have been given 73 problems so far), your class notes, and your textbook.
+
 ### Due before October 03
 
 1. Complete "Assignment 04" in MyStatLab
