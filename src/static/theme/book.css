@@ -783,6 +783,12 @@ table thead td {
 .rust pre > .result {
   margin-top: 10px;
 }
+.spoiler {
+    background-color: #222;
+}
+.spoiler:hover {
+    background-color: inherit;
+}
 @media only print {
   #sidebar,
   #menu-bar,
