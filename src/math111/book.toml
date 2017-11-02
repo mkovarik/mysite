@@ -1,4 +1,6 @@
 title = "MATH 111 Lecture Notes"
 author = "Michael Kovarik"
-src = "."
-dest = "../../dest/math111/"
+source = "."
+
+[output.html]
+destination = "../../dest/math111/"

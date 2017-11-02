@@ -1,5 +1,8 @@
 # Math 110 (Statistics I)
 
+**NOTE: AS OF NOVEMBER 1st, I WILL NO LONGER BE THE 
+INSTRUCTOR FOR MATH 110. THIS WEBSITE IS THEREFORE DEFUNCT.**
+
 This is the course website for sections 02 and 81 of Math 110,
 Statistics I. It contains lecture notes, homework assignments, and
 course-related news.

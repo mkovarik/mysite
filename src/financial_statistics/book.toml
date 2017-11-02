@@ -1,4 +1,6 @@
 title = "Financial Statistics"
 author = "Michael Kovarik"
-src = "."
-dest = "../../dest/financial_statistics"
+sourc = "."
+
+[output.html]
+destination = "../../dest/financial_statistics"
