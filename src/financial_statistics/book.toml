@@ -1,6 +1,0 @@
-title = "Financial Statistics"
-author = "Michael Kovarik"
-sourc = "."
-
-[output.html]
-destination = "../../dest/financial_statistics"
