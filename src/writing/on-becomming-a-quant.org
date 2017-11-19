@@ -1,0 +1,91 @@
+#+TITLE: "Things That a Quant Should Know"
+
+* Introduction
+* Mathematics & Statistics
+
+* Programming
+
+Programming is an essential skill
+
+** Choosing a Language
+
+Focus less on learning a large number of programming languages and more on
+/mastering/ every language that you intend to list on your resume. You should be
+able to speak intelligently about the languages you claim to know. Additionally,
+you should also have at least one non-trivial project written in each of these
+languages.
+
+You should know at least one "interpreted" language. Good examples include:
+
++ Python
++ R
++ Julia
++ Octave
+
+Python is the most recommended.
+
+Additionally, you should know at least one "compiled" language. Good examples
+include:
+
++ C++
++ Java
++ Fortran
++ Rust
+
+C++ is the most recommended.
+
+I also highly recommend learning SQL, a database querying language, as it is
+both useful and quick to learn.
+
+Feel free to learn niche languages (e.g. Haskell) at your pleasure. But be
+warned: it is good to be /opinionated/ but not /partisan/ about technology.
+
+** Python
+
+Python has a near ubiquitous presence in scientific computing. Even so, its
+popularity is only ascending. It is in your best interest to learn it.
+
+Python, however, is a slow languages. It is not suitable for
+performance-critical tasks. Scientific Python libraries often wrap code written
+in faster languages (e.g. C or Fortran or Cython).
+
+Some libraries to familiarize yourself with:
+
++ NumPy
++ pandas
++ scikit-learn
++ rpy2
+
+In addition to these libraries, I highly recommend familiarizing yourself with
+Jupyter.
+
+** C++
+
+Learning C++ is more arduous than learning Python. And putting a language
+like C++ on your resume means that more is expected of you. Compiled languages
+are typically more difficult to learn than interpreted ones.
+
+** Algorithms and Data Structures
+
+At the very minimum, you should understand big-O notation when discussing
+time/space efficiency.
+
+You should also be familiar with several algorithms. There is no one algorithm
+that you /need/ to know, but you should be familiar with many prominent
+algorithms. My recommendation:
+
+
++ Be familiar wtih prominent sorting algorithms (mergesort, quicksort, heapsort,
+  bubblesort). You will never have to implement these in the real world, but
+  they are insightful.
++ Be familiar with prominent data structures (linked lists, dynamic arrays,
+  hash tables, graphs, binary search trees, heaps). Know how to implement them
+  and their related algorithms. Know /which/ data structures to use in any given
+  situation.
++ Familiarize yourself with prominent algorithms from numerical analysis
+  (Newton's method, gradient descent, fast Fourier transform, finite
+   difference/element methods, quadrature methods).
+
+** Developer Tools
+
+* Financial Theory

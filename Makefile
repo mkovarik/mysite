@@ -2,7 +2,7 @@ all: build deploy
 .PHONY: clean static build math111 depoloy math110
 build: dest/index.html static math111 math110
 dest/index.html: src/index.html
-	cp $^ > $@
+	cp $^ $@
 static:
 	rsync -r src/static/ dest/static/ --delete
 math110:
