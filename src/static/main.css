@@ -1,0 +1,347 @@
+/*******************************************************************************
+* main.css
+*
+* Copyright (c) 2017, Nicolas P. Rougier
+* Copyright (c) 2017, Michael T. Kovarik
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are met:
+*
+* 1. Redistributions of source code must retain the above copyright notice, this
+*   list of conditions and the following disclaimer.
+*
+* 2. Redistributions in binary form must reproduce the above copyright notice,
+*   this list of conditions and the following disclaimer in the documentation
+*   and/or other materials provided with the distribution.
+*
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*******************************************************************************/
+
+/* --- Fonts ---------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url("fonts/Ubuntu-L.ttf");
+}
+
+
+/*******************************************************************************
+Styles
+*******************************************************************************/
+
+html {
+}
+
+body {
+    color: #222;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.5em;
+    padding: 1em;
+    margin: auto;
+    max-width: 42em;
+    background: #fff;
+    counter-reset: article tocitem;
+}
+
+strong {
+    font-weight: 400;
+}
+
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+/* --- Logos --------------------------------------------------------------- */
+.logo-container {
+    display: flex;
+    margin-top: 2em;
+    max-width: 24em;
+    margin: auto;
+    background: #dddddd;
+}
+.logo-container a {
+    margin:  auto;
+}
+.logo-container img {
+    width: 4em;
+}
+/* --- Links --------------------------------------------------------------- */
+a {
+    color: #06e;
+    text-decoration:none;
+}
+a:visited {
+    color: #06e;
+}
+a:hover {
+    color: #06e;
+}
+a:active {
+    color:#000000;
+}
+
+/* --- Headers ------------------------------------------------------------- */
+h1 {
+    font-size: 1.5em;
+}
+h1::before {
+    margin-right:10px;
+    color: white;
+    background-color: black;
+    padding-left: 10px; padding-right:10px;
+}
+h2 {
+    decoration: none;
+    color: black;
+    text-align: center;
+    margin-top: 3em;
+    border-bottom: 2px solid black;
+    font-size: 1.3em;
+}
+h3 {
+    font-size: 1.2em;
+}
+h3::before {
+    content: counter(article) ". ";
+    counter-increment: article;
+    margin-right: 10px;
+    color: white;
+    background: black;
+    border-radius: 4px;
+}
+h4 {
+    display: inline-flex;
+    font-size: 1.00em;
+}
+h4::after {
+    content: ".";
+}
+
+::selection {
+    color: #000;
+    background-color: #f0f0ff;
+}
+
+h1, h2, h3 {
+    padding: 15px 0 3px;
+    clear: both;
+    font-weight: 400;
+}
+
+/* --- Images -------------------------------------------------------------- */
+.bordered {
+    border: 1px solid black;
+}
+
+/* --- Table of contents --------------------------------------------------- */
+#text-table-of-contents {
+    padding-left: 0;
+    column-count: 2;
+}
+#text-table-of-contents ul, #text-table-of-contents ul li ul {
+    list-style-type: none;
+}
+#text-table-of-contents ul li a {
+    font-weight: bold;
+}
+#text-table-of-contents ul li ul a {
+    font-weight: normal;
+}
+#text-table-of-contents > ul > li > ul > li::before{
+    content: counter(tocitem) ". ";
+    counter-increment: tocitem;
+}
+
+/* --- Title/Subtitle ------------------------------------------------------ */
+h1.title::before { content: none; }
+h1.title {
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    margin-top:    64px;
+    margin-bottom: 1em;
+    padding: 0;
+    border: none;
+}
+h2.subtitle::before { content: none; }
+h2.subtitle {
+    font-size: 1.0em;
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+}
+.title-logos {
+    /* opacity: 0.15; */
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+}
+.title-logos p {
+    text-align: center;
+}
+
+
+/* --- Math ---------------------------------------------------------------- */
+.katex::after {
+    content: " "; /*stupid org-mode is stupid*/
+}
+
+/* --- Code ---------------------------------------------------------------- */
+code {
+    font-size: 95%;
+    font-weight: 300;
+    font-family: 'Source Code Pro';
+}
+pre.code,
+pre.output {
+    font-size:      85%;
+    font-family:    'Source Code Pro', monospace;
+    line-height:    125%;
+    padding-left:   2.0em;
+    padding-top:    0.5em;
+    padding-bottom: 0.5em;
+    overflow-x: auto;
+}
+pre.code {
+
+    background:     #fcfcfc;
+    border-top:     .5px solid #ccc;
+    border-bottom:  .5px solid #ccc;
+}
+pre.output {
+    background:     #fff;
+    border:         none;
+
+}
+
+.function, .class {
+    font-weight: 400;
+}
+.comment {
+    color: #459;
+}
+
+/* --- Bibliography -------------------------------------------------------- */
+.abstract {
+    border-left: 1px solid #ddd;
+    padding-left: 1em;
+    font-size:    85%;
+    line-height: 125%;
+}
+.line-block {
+    line-height: 125%;
+}
+
+/* --- Tables -------------------------------------------------------------- */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 33%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    border-bottom: .5px solid #999999;
+}
+td, th {
+    border: none;
+}
+th {
+    text-align: left;
+    font-weight: 400; /* Make sure they're bold */
+    border-bottom: 1px solid black;
+}
+td {
+    text-align: left;
+    border: none;
+}
+tr:nth-child(even) td {
+    background: #f0f0f0;
+}
+
+/* --- Admonitions --------------------------------------------------------- */
+.note {
+    font-size: 85%;
+    line-height: 125%;
+    float: left;
+    width: 240px;
+    padding: 0;
+    margin-left: -270px;
+}
+.note p {
+    text-align: left;
+    padding: 0;
+    margin:0;
+    padding-top: 0.5em;
+}
+.note p.first {
+    padding: 0;
+    padding-bottom: .5em;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+}
+
+.legend {
+    font-size: 85%;
+    line-height: 125%;
+    padding: 0;
+    float: right;
+    width: 240px;
+    margin-right: -270px;
+}
+.legend p {
+    text-align: left;
+    padding: 0;
+    margin:0;
+    padding-top: 0.5em;
+}
+.legend p.first {
+    padding: 0;
+    padding-bottom: .5em;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+}
+
+@media all and (max-width: 1400px) {
+    .note,
+    .legend {
+        box-sizing: border-box;
+        width: 80%;
+        margin: 10px auto;
+        float: none;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+@media all and (max-width: 870px) {
+    pre.code,
+    pre.output {
+        padding-left: 0.5em;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+}

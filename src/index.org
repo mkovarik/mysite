@@ -1,0 +1,29 @@
+#+TITLE:     Michael Kovarik
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/main.css" />
+#+OPTIONS: html-postamble:nil
+#+HTML: <div class="logo-container">
+#+HTML: <a href="mailto: michaelkovarik@outlook.com">
+#+HTML: <img src="static/img/email-icon.svg"></a>
+#+HTML: <a href="https://github.com/mkovarik">
+#+HTML: <img src="static/img/github-icon.svg"></a>
+#+HTML: <a href="https://www.linkedin.com/in/michael-kovarik-1380a3112">
+#+HTML: <img src="static/img/linkedin-icon.svg"></a>
+#+HTML: </div>
+#+LINK: ITG https://www.itg.com/
+#+LINK: MSMF http://www.finmath.rutgers.edu/
+
+I am a Financial Engineering Developer at [[ITG:][ITG]]. I have strong,
+demonstrable skill in
+
+- Mathematics (stochastic calculus, numerical analysis, optimization)
+- Statistics (mathematical statistics, econometrics, machine learning)
+- Programming (Python, R, C++, SQL, Unix)
+- Finance (financial data wrangling, derivatives pricing/hedging, fixed income
+  modeling, portfolio theory)
+
+Previously, I worked as a tutor and later as an instructor at a local college.
+I am a graduate of the Rutgers [[MSMF][Masters in Mathematical Finance
+(MSMF)]] program.
+
+
+ 

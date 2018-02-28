@@ -1,0 +1,253 @@
+#+SETUPFILE: setup.org
+#+TITLE:  Everything a Quant Should Know
+#+LINK: wiki https://en.wikipedia.org/wiki/
+
+* Introduction
+** Preface
+
+This guide was written to serve those aspiring to become quantitative analysts.
+Its real audience, however, is myself (I have a habit of writing advice for
+myself).
+
+I am only beginning my career in the financial industry, so I claim no
+authority. Please take any advice or claim written here with skepticism.
+
+This guide was last updated on November 2017.
+
+*** What is a Quant?
+
+Quants are people who apply mathematical models to solve financial problems. It
+does not refer to any one job title in particular. Some work on the creating and
+evaluating models ("quantitative research"). Some work on the implementation of
+these models ("quantitative development").
+
+Quants work in all subfields of finance, including portfolio management, risk
+management, algorithmic trading, and regulation compliance.
+
+*** Background 
+
+Quants are expected to be fluent in mathematics, statistics, and programming.
+And many have little or no formal education in the financial markets before
+starting their careers.
+
+PhD's in technical fields (computer science, mathematics, statistics, physics,
+etc.) make desirable quantitative researchers. Keep in mind, however, that it is
+generally a /really bad idea/ to get a PhD soley or primarily to get a job.
+
+It also helps to be a US citizen.
+
+*** Compensation
+
+Entry-level salaries are /typically/ $100k or less. But both the salary mean and
+variance increase with time. And there are factors beyond one's control. It is
+therefore difficult to predict how much one will earn 5 or 10 or 15 years into
+their career.
+
+There are steps, however, one can take to maximize one's future earnings
+potential:
+
++ Be good at their job.
++ Network furiously.
++ Learn new skills.
+
+And as with most careers, charisma is just as important as meri
+** Interviews
+
+There is an infinity of good interview advice out there: dress sensibly, display
+confidence, mind one's manners, and so forth.
+
+However, additional preparation should be made for acing /technical/ interviews.
+
+*** Your Resume
+
+Points are scored when a candidate demonstrates expertise. Points are lost when
+they only feign expertise. "Fake it 'till you make it" is not sensible practice
+here.
+
+A prepared candidate should be prepared to talk in-depth about every item on
+their resume. This applies especially to any listed skills and courses. You
+/will/ be asked questions on them. And not being able to answer them is
+embarrassing.
+
+Some examples:
+
++ You can code in C++? Can you discuss a major project you worked on with this
+  language? What VCS did you use? Did you use automatic tests? How did you go
+  about memory debugging?
++ You claim to know "stochastic calculus". Can you state the /martingale
+  representation theorem/?
++ It says here that you took a course on topology. What is the fundamental group
+  of a circle?
+
+I was actually asked the third question when interviewing at an investment bank
+*** Brainteasers
+
+These are questions with non-obvious and counter-intuitive solutions. Some
+examples:  
+
++ You have three jugs, with the capacities being 3, 5 and 8 gallons. Only largest
+  jug is filled with water. The other two are empty How would you measure out
+  four gallons of water?
++ Suppose an 8x8 chessboard has a pair of opposite corners removed. It is possible
+  to cover the chessboard with 31 2x1 dominoes?
++ Suppose temperature and humidity are continuous functions on a perfectly
+  spherical Earth. Show mathematically that their exists a pair of points on the
+  Earth with the exact same temperature and humidity.
+
+Ostensibly, they are used to see how a candidate thinks, how they react under
+pressure, how they they deal with ambiguity, and so forth. In reality, they act
+to filter out candidates who haven't spent hours of their time studying
+brainteasers.
+
+There are plenty of "quant interview" books with brainteasers problems. Study as
+much as you can. Focus especially on brainteasers dealing with chance. If you
+come across a question that you have studied before (and you will), then do the
+following:
+
+1. Do not indicate that you are familiar with the problem, even though you
+   totally are.
+2. Ask the interviewer a clarifying question or two.
+3. Create a solution that is sensible, but wrong. Explain your reasoning thoroughly.
+4. Have the interviewer give you a hint.
+5. Have a faux "A-hah!" moment. Solve the brainteaser. Again, explain every step.
+
+Companies really need to stop using brainteasers. 
+
+* Mathematics
+** Calculus
+
+Between high school and college, I took around 7 or so semesters worth of
+calculus. Here are some of the more important bits:
+
+*** Optimization
+
+Optimizing functions is one of the quintessential applications of
+differentiation. And it appears everywhere in finance.
+
+For example, a portfolio manager may want to figure how to construct a portfolio
+so as to minimize risk given a desired average rate of return.
+
+Or perhaps an investment firm may want to build a model to precict future stock
+prices. To calibrate such a model, one might want to minimize some error metric
+measuring the difference between observed historical prices and the
+model-generated values.
+
+A derivatives trader may want to solve some partial differential equation in order
+to find the arbitrage-free price of some derivative. After discretization, the problem
+may turn into a problem of solving some matrix equation \(Ax = b\)  ($x$ and $b$ being
+vectors). A computationally feasible method of solving this system of $x$ is to 
+minimize the following function:
+
+$$f(x) = \frac{1}{2} x^T A x - b^T x.$$
+
+In the simplest case, a smooth, convex function $f$ can be minimized by calculating
+where the gradiant vanishes: 
+
+$$\nabla f(x) = 0.$$ 
+
+In code, this can be accomplished by the [[wiki:Gradient_descent][gradient descent]] algorithm. Basically, one
+would increment the value of $x$ in the direction where $f$ decreases fastest. In
+pseudo-code:
+
+1. Set $x$ to be some initial guess.
+2. $x \gets x - \gamma(x) \nabla f(x)$.
+3. Repeat step 2 until $\nabla f \approx 0$.
+
+(Here, $\gamma (x)$ should decrease as $\nabla f (x) \to 0$ to achieve convergence).
+
+For non-convex functions, gradient descent may still work. But care must be taken so
+as to make sure one obtains global minima instead of merely local minima.
+
+For constrained optimization problems, [[wiki:Lagrangian_multiplier][Lagrangian multipliers]] may be employed.`
+
+*** Quadrature
+
+There are many applications of integration to finance, from derivatives pricing
+to Bayesian inference. The numerical approximation of integrals, called
+"quadrature", is therefore an essential skill for quants.
+
+An integral may be interpreted as the average value of some function (given a
+unit-sized domain). The average of a function $f$ on the unit interval $[0.1]$
+is given by $\int_0^1 f(x) dx$.
+
+The average value of a function may be approximated by taking a discrete average
+of the function over a sample $0 \leq x_1, x_2, \ldots, x_N \leq 1$ of "nodes":
+
+$$\int_{0}^{1} f(x) dx \approx \frac{1}{N} \sum_{n=1}^{N} f(x_n).$$
+
+If the nodes are randomly sampled uniformly from $[0,1]$, then this approximation
+is called [[wiki:Monte_Carlo_integration][Monte Carlo integration]]. The standard error can be proven to be
+$O(1/\sqrt{N})$. However, if the nodes are chosen instead to be a 
+[[wiki:Low-discrepancy_sequence][low-discrepancy sequence]] ("quasi-random numbers"), then convergence is much
+faster, with standard errors closer to $O(1/N)$.
+
+The nodes can be chosen ahead of time. In such cases, it is typical to include
+weights in the averaging:
+
+$$\int_0^1 f(x) dx \approx \sum_{n=1}^{N} w_n f(x_n).$$
+
+These weights should sum to the size of the integrand (in this case, 1). But
+they need not be positive.
+
+In [[wiki:Newton-Cotes_formulas][Newton-Cotes quadrature]] and [[wiki:Gaussian_quadrature][Gaussian quadrature]], nodes and weights are chosen
+so that there is zero approximation error when the integrand belongs to some
+class of functions (typically polynomial up to a given degree).
+
+Tabulated below are some nodes and weights for various quadrature rules (the
+domain of integration being $[0,1]$):
+
+| Rule           |  Nodes | Weights |
+|----------------+--------+---------|
+| Trapezoid      | 0.0000 | 1/2     |
+|                | 1.0000 | 1/2     |
+|----------------+--------+---------|
+| Simpson's      | 0.0000 | 1/6     |
+|                | 0.5000 | 2/3     |
+|                | 1.0000 | 1/6     |
+|----------------+--------+---------|
+| Gauss-Legendre | 0.2113 | 1/2     |
+| (two nodes)    | 0.7887 | 1/2     |
+|----------------+--------+---------|
+| Gauss-Legendre | 0.1127 | 5/18    |
+| (three nodes)  | 0.0000 | 4/9     |
+|                | 0.8873 | 5/18    |
+
+
+*** Fourier Analysis AA
+
+
+Fourier analysis can be used to price options. It also has applications to
+time-series analysis.
+** Linear Algebra
+
+*** Eigendecomposition
+*** Numerical Procedures
+*** Functional Analysis
+
+** Probability Theory
+
+*** Calculus of Random Variables
+*** Information
+*** Random Number Generators
+
+** Stochastic Calculus
+*** Stochastic Differential Equations
+*** Important Theorems
+*** Ito's Lemma
+    
+* Statistics
+** Econometric Models
+** Calibration and Selection
+** Inference
+** Machine Learning
+
+* Programming
+** Languages
+** Algorithms and Data Structures
+** Best Practices
+
+* Finance
+** Options Pricing
+** Fixed Income
+** Portfolio Theory
+** Algorithmic Trading

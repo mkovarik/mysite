@@ -1,0 +1,8 @@
+#+AUTHOR: Michael Kovarik
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/main.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/katex/katex.min.css">
+#+HTML_HEAD: <script src="static/katex/katex.min.js" type="text/javascript"></script>
+#+HTML_HEAD: <script src="static/katex/contrib/auto-render.js" type="text/javascript"></script>
+#+HTML_HEAD: <script src="static/katex/contrib/auto-render-execute.js" type="text/javascript"></script>
+#+OPTIONS: num:0 author:2 toc:2 html-postamble:nil tex:verbatim
+

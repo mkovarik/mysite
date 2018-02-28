@@ -1,0 +1,109 @@
+#login_header
+{
+	width: 236px; 
+	height: 20px; 
+	margin-bottom: 1px;
+	background: url(https://retirement4-dev.prudential.com/UnProtected/proto/images/login_header_bg.gif) no-repeat;
+}
+
+#buttons { text-align: right;}
+#buttons .next { padding-left: 20px; }
+#steps { font-size: 12px; }
+#steps .step { float: left; background: #EEC490; border:1px solid #ddd; padding:5px 13px; margin-right:10px; }
+.mar_left_10{margin-left:10px;}
+div#outer_frame{width:1040px;margin:0px auto;}
+.mar_bot_30{margin-bottom:30px;}
+.mar_bot_35{margin-bottom:35px;}
+.pad_bot_35{padding-bottom:30px;}
+.mar_bot_13{margin-bottom:13px;}
+.mar_bot_16{margin-bottom:16px;}
+.mar_left_5{margin-left:5px;}
+.mar_top_40{margin-top:40px;}
+.pad_top_20{padding-top:20px;}
+.mar_left_neg{margin-left:-4px;}
+.pad_bot_10{padding-bottom:10px!important;}
+.mar_top_10{margin-top: 10px !important;}
+.mar_top_20{margin-top: 20px !important;}
+.mar_top_30{margin-top: 30px !important;}
+.mar_bot_20{margin-bottom:20px !important;}
+.normal_font{
+font-weight : normal !important;
+
+}
+.labelSection label{
+	width:260px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:10px;
+	padding-top:5px;
+	font-weight:bold;
+}
+.challenge_question .labelSection label:first-child{
+	width:570px;
+}
+div.challenge_question div.labelSectionChal select{
+	display:inline-block;
+	width:470px;
+	margin-right:90px;
+} 
+body{margin:0px;}
+#print_button{padding-top:0px;}
+.labelSection span.normal-font{font-weight:normal;}
+.slash_style{
+	display:inline-block;
+	padding:5px 2px 0px;
+}
+.pwdMeterContainer{
+	padding:10px 0px 0px 25px;
+}
+.password_position{
+	float:right;
+	width:570px;
+}
+.clearBoth{
+	clear:both;
+}
+
+.electronicConsent p{
+	margin:0px;
+	padding:0px;
+}
+.right{text-align: right;}
+/* Forgot your password */
+     
+.inputText_style{
+    display: inline; 
+    margin: -8px 73px;
+}
+.input_text{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #484C54;
+    padding-bottom: 45px;
+    padding-top: 10px;
+    display: inline-block;
+    font-weight:bold;
+} 
+.detail{
+    display: inline-block;
+    margin-left: 75px;
+}
+.ver_middle{
+	vertical-align:middle;
+}
+.table-content ul{list-style:disc;margin-top:10px;}
+.table-content ul li{margin-left:20px;margin-bottom:10px;}
+.table-content ul li ul{list-style:circle;}
+.table-content ul li ul li ul{list-style:square;}
+#footer{margin:0;color:#484C54;padding-bottom:0px;}
+.footer-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #2E2E2E;
+    border-bottom: 1px solid #3e4954;
+    color: #9095A1;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+#+TITLE:     MichaelK
+#+AUTHOR:    Michael Kovarik
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/main.css" />
+
+#+BEGIN_EXPORT html
+      <div class="logo-container">
+        <a href="mailto: michaelkovarik@outlook.com">
+          <img src="static/img/email-icon.svg"></a>
+        <a href="https://github.com/mkovarik">
+          <img src="static/img/github-icon.svg"></a>
+        <a href="https://www.linkedin.com/in/michael-kovarik-1380a3112">
+          <img src="static/img/linkedin-icon.svg"></a>
+      </div>
+#+END_EXPORT
